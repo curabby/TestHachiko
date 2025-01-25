@@ -1,0 +1,17 @@
+# Игнорируем файлы окружения
+.env
+.env.dev
+*.venv
+
+# Логи и временные файлы
+*.log
+*.pid
+*.pyc
+__pycache__/
+
+# Файлы Docker
+*.db
+logs/
+
+.idea/
+

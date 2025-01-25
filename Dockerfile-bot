@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+# Установка рабочей директории
+WORKDIR /bot
+
+# Копируем файл зависимостей
+COPY BotApp/requirements.txt ./requirements.txt
+
+# Устанавливаем зависимости
+RUN pip install --no-cache-dir -r /bot/requirements.txt
+
+# Копируем весь код приложения
+COPY /BotApp .
+
+# Устанавливаем переменную окружения для отключения буферизации Python вывода
+ENV PYTHONUNBUFFERED=1
+
+# Указываем команду для запуска
+CMD ["python", "/bot/main.py"]
