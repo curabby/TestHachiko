@@ -21,7 +21,7 @@ env_path = BASE_DIR.parent / ".env"
 
 # Load the .env file
 load_dotenv(dotenv_path=env_path)
-print(env_path)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -93,7 +93,7 @@ DATABASES = {
     }
 }
 
-print(os.environ.get("POSTGRES_ENGINE"))
+
 
 
 # Password validation
